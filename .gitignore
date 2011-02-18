@@ -9,6 +9,8 @@
 ###############
 logs/
 env/
+myproject/compressor
+
 
 # Specific files #
 ##################

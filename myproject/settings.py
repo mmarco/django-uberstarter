@@ -46,12 +46,12 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.dirname(__file__) +'/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -100,6 +100,24 @@ TEMPLATE_DIRS = (
     os.path.dirname(__file__) + "/templates",
 )
 
+
+#django-css
+COMPILER_FORMATS = {
+    '.sass': {
+        'binary_path':'sass',
+        'arguments': '*.sass *.css'
+    },
+    '.hss': {
+        'binary_path':'/home/dziegler/hss',
+        'arguments':'*.hss'
+    },
+    '.ccss': {
+        'binary_path':'clevercss',
+        'arguments': '*.ccss'
+    },
+}
+
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -111,6 +129,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    
+    'compressor',
 
 )
 

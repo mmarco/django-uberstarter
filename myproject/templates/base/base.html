@@ -1,0 +1,84 @@
+{% load compress %}
+<!doctype html>  
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+{% block head %}
+
+  {% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/img/favicon.ico">
+    <link rel="apple-touch-icon" href="media/img/apple-touch-icon.png">
+  {% endblock meta %}
+  
+  <title>{% block title %}Name Your Pages!{% endblock title %}</title>
+
+{% compress css %}
+{% block css %}
+
+
+  <link rel="stylesheet" href="/media/css/boilerplate/style.css" >
+	
+  {% block extra_css %}{% endblock extra_css %}
+{% endblock css %}
+{% endcompress %}
+
+  <script src="media/js/libs/modernizr-1.6.min.js"></script>
+
+{% block extra_head %}{% endblock extra_head %}
+{% endblock head %}
+</head>
+
+<body>
+{% block body %}
+  <div id="container" class="container_12">
+    
+    {% block container %}
+    <header>
+      {% block header %}
+      {% endblock header %}
+      <div class="clear"></div>
+    </header>
+    
+    <div id="main">
+      {% block main %}
+      {% endblock main %}
+      <div class="clear"></div>
+    </div>
+    
+    <footer>
+      {% block footer %}
+      {% endblock footer %}
+      <div class="clear"></div>
+    </footer>
+    {% endblock container %}
+
+  <div class="clear"></div>
+  </div> <!-- end of #container -->
+
+  {% compress js %}
+  {% block js %}
+    <script src="/media/js/libs/jquery-1.5.min.js"></script>
+    <!--[if lt IE 7 ]>
+      <script src="media/js/libs/dd_belatedpng.js"></script>
+      <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+    <![endif]-->
+  
+  
+    {% block extra_js %}{% endblock extra_js %}
+  {% endblock js %}
+  {% endcompress %}
+  
+
+  
+{% endblock body %}
+</body>
+</html>

@@ -21,3 +21,9 @@ cd ..
 virtualenv env --no-site-packages -p python2.6
 #source env/bin/activate
 env/bin/pip install -r requirements.txt
+
+
+echo "Installing apps into project"
+python env/src/django-css/setup.py install
+
+mv env/src/django-css/compressor myproject/
