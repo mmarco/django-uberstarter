@@ -1,0 +1,6 @@
+django == 1.2.5
+django-debug-toolbar >= 0.8
+BeautifulSoup >= 3.2.0
+-e git+https://github.com/dziegler/django-css.git#egg=django-css
+-e git+https://github.com/dziegler/clevercss.git#egg=clevercss
+shpaml >= 0.93
