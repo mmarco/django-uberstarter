@@ -16,6 +16,7 @@ sudo easy_install pip
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
 
+
 echo "Populating virtual environment"
 cd ..
 virtualenv env --no-site-packages -p python2.6
@@ -25,5 +26,4 @@ env/bin/pip install -r requirements.txt
 
 echo "Installing apps into project"
 python env/src/django-css/setup.py install
-
 mv env/src/django-css/compressor myproject/
