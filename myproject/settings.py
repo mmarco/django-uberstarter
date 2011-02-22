@@ -46,12 +46,12 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.dirname(__file__) +'/media/'
+MEDIA_ROOT = os.path.dirname(__file__) +'/static/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/media/'
+MEDIA_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -74,6 +74,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'myproject.urls'
@@ -105,7 +106,7 @@ TEMPLATE_DIRS = (
 COMPILER_FORMATS = {
     '.sass': {
         'binary_path':'sass',
-        'arguments': '*.sass *.css'
+        'arguments': '*.sass'
     },
     '.hss': {
         'binary_path':'/home/dziegler/hss',
@@ -129,9 +130,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-
+    'debug_toolbar',
     'compressor',
-
+    
 )
 
 ACCOUNT_ACTIVATION_DAYS = 7

@@ -17,22 +17,21 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
-    (r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'base/base.html'}),
+    (r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'base/demo.html'}),
 )
 
 
 
 
-if settings.DEBUG:
-    urlpatterns += patterns('',
-                            
-        # Apache config will serve these from the static server.
-        # These are used only in dev runsrever mode 
-        (r'^files/(?P<path>.*)$', 'django.views.static.serve',
-              {'document_root':os.path.dirname(__file__) + "/files"}),
-    
-        # care of them. use only in dev runsrever mode 
-        (r'^media/(?P<path>.*)$', 'django.views.static.serve',
-              {'document_root':os.path.dirname(__file__) + "/media"}),  
-              
-  )
+urlpatterns += patterns('',
+                        
+    # Apache config will serve these from the static server.
+    # These are used only in dev runsrever mode 
+    (r'^files/(?P<path>.*)$', 'django.views.static.serve',
+          {'document_root':os.path.dirname(__file__) + "/files"}),
+
+    # care of them. use only in dev runsrever mode 
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+          {'document_root':os.path.dirname(__file__) + "/static"}),  
+          
+)

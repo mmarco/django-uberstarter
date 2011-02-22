@@ -1,12 +1,7 @@
 import os
 DEBUG = True
 
-MEDIA_ROOT = os.path.dirname(__file__) +'/media/'
-MEDIA_URL = '/media/'
+INTERNAL_IPS = ('127.0.0.1',)
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.dirname(__file__) + "/templates",
-)
+MEDIA_ROOT = os.path.dirname(__file__) +'/static/'
+MEDIA_URL = '/static/'
