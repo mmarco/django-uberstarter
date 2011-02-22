@@ -14,25 +14,28 @@ Django-uberstarter is an automated project starter that makes life easier for fr
 **Front-end**
 
 * django-css_ - A wonderful compressor that bundles all your static js/css into one file in order to minimize HTTP requests.
-* CleverCSS_ - The pythonic tribute to ruby's SASS_, which lets you write indentation-based CSS in order to stay DRY. Needless to say, CSS compilers rock_.
+* CleverCSS_ - The pythonic tribute to ruby's SASS_, which lets you write indentation-based CSS in order to stay DRY. Needless to say, it rocks_.
 * shpaml_ - The pythonic tribute to ruby's HAML_, which lets you write indentation-based HTML, so you can also stay DRY.
-* HTML5boilerplate_ - By the wonderful wizards led by Paul Irish, it gets you an HTML5-ready markup with plenty of fallbacks for crappy/older browsers.
+* HTML5boilerplate_ - By the wonderful wizards led by `Paul Irish`_, it gets you an HTML5-ready markup with plenty of fallbacks for crappy/older browsers.
 * 960.gs_ - Our favorite CSS framework. Period.
 * jQuery - 1.5 as of this release
-* Sample prototype page for quick_iterations_ - Thanks to the wonderful work of `Stephen Bau`_ I use this extensively to get apps to "just work" at first, maybe you will like it too!
+* Sample prototype page for `quick iterations`_ - Thanks to the wonderful work of `Stephen Bau`_ I use this extensively to get apps to "just work" at first, maybe you will like it too!
 
 
 .. _virtualenv: http://www.arthurkoziel.com/2008/10/22/working-virtualenv/
 .. _django-debug-toolbar: https://github.com/robhudson/django-debug-toolbar
-.. _rock: http://blog.davidziegler.net/post/92203003/css-compilers-rock
+.. _rocks: http://blog.davidziegler.net/post/92203003/css-compilers-rock
 .. _SASS: http://sass-lang.com/
 .. _HAML: http://haml-lang.com/
 .. _django-css: https://github.com/dziegler/django-css
 .. _CleverCSS: http://github.com/dziegler/clevercss/tree/master 
 .. _shpaml: http://shpaml.webfactional.com/
 .. _HTML5boilerplate: http://html5boilerplate.com/
+.. _`Paul Irish`: http://paulirish.com/
+
+
 .. _960.gs: http://960.gs/
-.. _quick_iterations: http://designinfluences.com/fluid960gs/
+.. _`quick iterations`: http://designinfluences.com/fluid960gs/
 .. _`Stephen Bau`: http://www.domain7.com/Team/StephenBau.html
 
 
