@@ -1,9 +1,10 @@
 Django UberStarter
-=================
+==================
 
 Django-uberstarter is an automated project starter that makes life easier for front-end developers. It combines the following apps/best practices to give you the most up-to-date Django setup possible:
 
 **Back-end, environment stuff**
+
 * python 2.6 - Easily changeable to whatever version you want (just edit bin/uberstart.sh)
 * virtualenv_ - Isolate projects into a dedicated python environment so you can install things without breaking other projects.
 * pip - Our favorite package installer
@@ -11,6 +12,7 @@ Django-uberstarter is an automated project starter that makes life easier for fr
 * django-debug-toolbar_ - Makes debugging django a less painful experience. Use it.
 
 **Front-end**
+
 * django-css_ - A wonderful compressor that bundles all your static js/css into one file in order to minimize HTTP requests.
 * CleverCSS_ - The pythonic tribute to ruby's SASS_, which lets you write indentation-based CSS in order to stay DRY. Needless to say, CSS compilers rock_.
 * shpaml_ - The pythonic tribute to ruby's HAML_, which lets you write indentation-based HTML, so you can also stay DRY.
