@@ -48,6 +48,7 @@ Installation
 * Initiate your project's virtualenv (*source /path/to/django-uberstarter/env/bin/activate*)
 * Start the django server (*python /path/to/django-uberstarter/myproject/manage.py runserver*) 
 * Check out the prototype page! (*http://localhost:8000/*) 
+* Superuser is username: admin, password: a (yes, just the letter a, so change it! *http://localhost:8000/admin*) 
 
 
 Usage
