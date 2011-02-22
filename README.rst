@@ -19,7 +19,7 @@ Django-uberstarter is an automated project starter that makes life easier for fr
 * HTML5boilerplate_ - By the wonderful wizards led by Paul Irish, it gets you an HTML5-ready markup with plenty of fallbacks for crappy/older browsers.
 * 960.gs_ - Our favorite CSS framework. Period.
 * jQuery - 1.5 as of this release
-* Sample prototype page for quick_iterations_ - Thanks to the wonderful work of Stephen_Bau_ I use this extensively to get apps to "just work" at first, maybe you will like it too!
+* Sample prototype page for quick_iterations_ - Thanks to the wonderful work of `Stephen Bau`_ I use this extensively to get apps to "just work" at first, maybe you will like it too!
 
 
 .. _virtualenv: http://www.arthurkoziel.com/2008/10/22/working-virtualenv/
@@ -33,22 +33,23 @@ Django-uberstarter is an automated project starter that makes life easier for fr
 .. _HTML5boilerplate: http://html5boilerplate.com/
 .. _960.gs: http://960.gs/
 .. _quick_iterations: http://designinfluences.com/fluid960gs/
-.. _Stephen_Bau: http://www.domain7.com/Team/StephenBau.html
+.. _`Stephen Bau`: http://www.domain7.com/Team/StephenBau.html
 
 
 
 
 Installation
 ************
-* cd ALL THE WAY into /path/to/django-uberstarter/bin
-* Get all the goodies setup (source uberstart.sh and wait for packages to get downloaded/installed )
-* Initiate your project's virtualenv (source /path/to/django-uberstarter/env/bin/activate)
-* Check out the prototype page! (python /path/to/django-uberstarter/myproject/manage.py runserver)
+* cd **ALL THE WAY** into /path/to/django-uberstarter/bin
+* Get all the goodies setup (*source uberstart.sh and wait for packages to get downloaded/installed*)
+* Initiate your project's virtualenv (*source /path/to/django-uberstarter/env/bin/activate*)
+* Start the django server (*python /path/to/django-uberstarter/myproject/manage.py runserver*) 
+* Check out the prototype page! (*http://localhost:8000/*) 
 
 
 Usage
 ************
-Naturally, calling your project "myproject" is a bit boring, so you will want to edit the following when you change its name to something else:
+Naturally, calling your project *"myproject"* is a bit boring, so you will want to edit the following when you change its name to something else:
 
-* Rename the folder inside django-uberstarter (ie. django-uberstarter/myproject/ to django-uberstarter/sweet-unicorns/)
-* Change the ROOT_URLCONF variable in settings.py to reflect the new project's name (ie. ROOT_URLCONF = 'myproject.urls' to ROOT_URLCONF = 'sweet-unicorns.urls')
+* Rename the folder inside django-uberstarter (*ie. django-uberstarter/myproject/ to django-uberstarter/sweet-unicorns/*)
+* Change the **ROOT_URLCONF** variable in settings.py to reflect the new project's name (*ie. ROOT_URLCONF = 'myproject.urls' to ROOT_URLCONF = 'sweet-unicorns.urls'*)
