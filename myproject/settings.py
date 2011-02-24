@@ -61,12 +61,6 @@ ADMIN_MEDIA_PREFIX = '/media/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'jvab%8jdfg_x0k3)2f9z=mewd7ecq!(6!j0)f@nam^3b0*8c7e'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -94,6 +88,24 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'util.context_processors.common',
 )
+
+
+
+
+# List of callables that know how to import templates from various sources.
+TEMPLATE_LOADERS = (
+    'shpaml_loader.filesystem',
+    'shpaml_loader.app_directories',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
+)
+
+# Cache templates in production
+if not DEBUG:
+    TEMPLATE_LOADERS = (
+        ('django.template.loaders.cached.Loader', TEMPLATE_LOADERS),
+    )
 
 
 

@@ -6,6 +6,7 @@
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
 <head>
 {% block head %}
 
@@ -19,10 +20,13 @@
     <link rel="apple-touch-icon" href="media/img/apple-touch-icon.png">
   {% endblock meta %}
   
-  <title>{% block title %}Name Your Pages!{% endblock title %}</title>
+	title 
+		{% block title %}Name Your Pages!{% endblock title %}
 
 {% compress css %}
 {% block css %}
+	> link rel="stylesheet" href="/static/css/boilerplate/style.css"
+	
 	<link rel="stylesheet" href="/static/css/boilerplate/style.css" >
 	<link rel="stylesheet" href="/static/css/960/reset.css" >
 	<link rel="stylesheet" href="/static/css/960/text.css" >
@@ -32,7 +36,7 @@
 {% endblock css %}
 {% endcompress %}
 
-  <script src="/static/js/libs/modernizr-1.6.min.js"></script>
+<script src="/static/js/libs/modernizr-1.6.min.js"></script>
 {% block extra_head %}{% endblock extra_head %}
 {% endblock head %}
 </head>
