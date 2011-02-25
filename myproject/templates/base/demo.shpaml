@@ -1,0 +1,712 @@
+{% extends "base/base.shpaml" %}
+{% block extra_css %}
+
+	<link rel="stylesheet" href="/static/css/demo/layout.css" media="screen" >
+	<link rel="stylesheet" href="/static/css/demo/nav.css" media="screen" >
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/static/css/demo/ie6.css" media="screen" ><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/static/css/demo/ie.css" media="screen" ><![endif]-->
+{% endblock extra_css %}
+
+{% block extra_js %}
+	<script type="text/javascript" src="/static/js/demo/jquery-ui.js"></script>
+	<script type="text/javascript" src="/static/js/demo/jquery-fluid16.js"></script>
+{% endblock extra_js %}
+
+
+
+{% block header %}
+
+{# ------ TITLE ------ #}
+div.grid_12
+	h1#branding
+		a href="#none" | Fluid 960s Grid System
+.clear | &nbsp;
+
+
+{# ------ NAV MENU ------ #}
+div.grid_12		
+	ul.nav.main
+		li
+			a href="#none_" | Fluid 12-column
+			ul
+				li > a href="#none_fluid/mootools/"  |   MooTools
+				li > a href="#none_fluid/jquery/"    |   jQuery
+				li > a href="#none_fluid/mootools/"  |   No Javascript
+					
+		li
+			a href="#none_" | Fluid 16-column
+			ul
+				li > a href="#none_fluid/mootools/"  |   MooTools
+				li > a href="#none_fluid/jquery/"    |   jQuery
+				li > a href="#none_fluid/mootools/"  |   No Javascript
+
+		li
+			a href="#none_" | Fixed 12-column
+			ul
+				li > a href="#none_fluid/mootools/"  |   MooTools
+				li > a href="#none_fluid/jquery/"    |   jQuery
+				li > a href="#none_fluid/mootools/"  |   No Javascript
+					
+		li
+			a href="#none_" | Fixed 16-column
+			ul
+				li > a href="#none_fluid/mootools/"  |   MooTools
+				li > a href="#none_fluid/jquery/"    |   jQuery
+				li > a href="#none_fluid/mootools/"  |   No Javascript
+				
+		li
+			a href="http://overture21.com/forum/comments.php?DiscussionID=231"  |  Download / Forum
+			ul
+				li > a href="http://github.com/bauhouse/fluid960gs/tree/"   |   Download: Github
+				li > a href="http://github.com/bauhouse/sym-fluid960gs/tree/"    |   Symphony Ensemble
+				li > a href="http://overture21.com/forum/comments.php?DiscussionID=231"  |   Forum Discussion
+
+		li class="secondary" > a href="http://960.gs/" title="960.gs: A CSS grid system developed by Nathan Smith"    |    The 960 Grid System
+
+{% endblock header %}
+
+
+
+
+
+{% block main %}
+
+div.grid_12 > h2#page-heading  |  Templates for Rapid Interactive Prototyping
+.clear | &nbsp;
+
+
+{# ------ INTRO BOXES ------ #}
+div.grid_3
+	div.box
+		h2  |  Design Process
+		div.block > p  |  Design is based on the inspiration of past accomplishments. On that foundation, we can build upon those achievements to shape the future. Design is about life — past, present and future — and the learning process that happens between birth and death. It is about community and shared knowledge and experience. It is the passion to build on what we've learned to create something better.
+
+div.grid_3
+	div.box
+		h2  |  Design Influences
+		div.block > p  |  The words "design influences" can be understood as both a plural noun and as subject and verb. The plural noun speaks of those who have come before us and paved the way. The verb speaks of the responsibility of design to lead the way. By understanding where we have come from, we have a better idea of where we are going and, perhaps, where we should be heading.
+
+div.grid_3
+	div.box
+		h2  |  Inspiration
+		div.block
+			p
+				I have been inspired by the work of many who have pioneered advances in Web Standards, including 
+				a href="http://www.31three.com/" title="www.31three.com"   |   Jesse Bennett-Chamberlain
+				, 
+				a href="http://www.stopdesign.com/" title="www.stopdesign.com"   |   Douglas Bowman
+				, 
+				a href="http://www.chaoticpattern.com/" title="www.chaoticpattern.com"   |   Allen Chang
+				, 
+				a href="http://www.stuffandnonsense.co.uk/" title="www.stuffandnonsense.co.uk"   |   Andy Clarke
+				, 
+				a href="http://www.hicksdesign.co.uk/" title="www.hicksdesign.co.uk"   |   Jon Hicks
+				, 
+				a href="http://www.shauninman.com/" title="www.shauninman.com"   |   Shaun Inman
+				, 
+				a href="http://www.cameronmoll.com/" title="www.cameronmoll.com"   |   Cameron Moll
+				, 
+				a href="http://veerle.duoh.com/" title="veerle.duoh.com"   |   Veerle Pieters
+				, 
+				a href="http://www.jasonsantamaria.com/" title="www.jasonsantamaria.com"   |   Jason Santa Maria
+				, 
+				a href="http://www.mezzoblue.com/" title="www.mezzoblue.com"   |   Dave Shea
+				, 
+				a href="http://www.thebignoob.com/" title="www.thebignoob.com"   |   Ryan Sims
+				, 
+				a href="http://www.sonspring.com/" title="www.sonspring.com"   |   Nathan Smith
+				, and 
+				a href="http://www.zeldman.com/" title="www.zeldman.com"   |   Jeffrey Zeldman
+				, to name a few. Thank you for inspiring <a href="http://www.domain7.com/WhoWeAre/StephenBau.html" title="Stephen Bau, Designer, Domain7">me</a> to give something back.
+
+div.grid_3
+	div.box
+		h2  |  Contribution
+		div.block
+			p
+				The <a href="/fluid960gs/">Fluid 960 Grid System</a> templates have been built upon the work of Nathan Smith and his 
+				<a href="http://960.gs/">960 Grid System</a> using effects from the <a href="http://mootools.net/">MooTools</a> JavaScript library. 
+				The idea for building these templates was inspired by Andy Clarke, author of 
+				<a href="http://www.transcendingcss.com/">Transcending CSS</a>, who advocates a content-out approach to rapid interactive 
+				prototyping, crediting Jason Santa Maria with the 
+				<a href="http://www.jasonsantamaria.com/archive/2004/05/24/grey_box_method.php">grey box method</a>.
+.clear | &nbsp;
+
+
+
+
+{# ------ GRID ITERATIONS ------ #}
+div.box.grid_12 style="padding:0;"
+	h2 style="margin:0" > a href="#" style="background-position:99.3% 50%" id="toggle-grid"   |   12-column Grid
+.clear | &nbsp;
+
+
+div#grid
+	div.grid_1 > div.box > p   |   01
+	div.grid_1 > div.box > p   |   02
+	div.grid_1 > div.box > p   |   03
+	div.grid_1 > div.box > p   |   04
+	div.grid_1 > div.box > p   |   05
+	div.grid_1 > div.box > p   |   06
+	div.grid_1 > div.box > p   |   07
+	div.grid_1 > div.box > p   |   08
+	div.grid_1 > div.box > p   |   09
+	div.grid_1 > div.box > p   |   10
+	div.grid_1 > div.box > p   |   11
+	div.grid_1 > div.box > p   |   12
+	.clear | &nbsp;
+
+
+	div.grid_2 > div.box > p   |   01
+	div.grid_2 > div.box > p   |   02
+	div.grid_2 > div.box > p   |   03
+	div.grid_2 > div.box > p   |   04
+	div.grid_2 > div.box > p   |   05
+	div.grid_2 > div.box > p   |   06
+	.clear | &nbsp;	
+	
+
+	div.grid_3 > div.box > p   |   01
+	div.grid_3 > div.box > p   |   02
+	div.grid_3 > div.box > p   |   03
+	div.grid_3 > div.box > p   |   04
+	.clear | &nbsp;
+
+
+	div.grid_4 > div.box > p   |   01
+	div.grid_4 > div.box > p   |   02
+	div.grid_4 > div.box > p   |   03
+	.clear | &nbsp;	
+	
+
+	div.grid_5 > div.box > p   |   01
+	div.grid_7 > div.box > p   |   02
+	.clear | &nbsp;
+
+
+	div.grid_6 > div.box > p   |   01
+	div.grid_6 > div.box > p   |   02
+	.clear | &nbsp;
+	
+	
+	div.grid_1.suffix_11 > div.box > p   |   01
+	.clear | &nbsp;
+	div.grid_1.prefix_1.suffix_10 > div.box > p   |   02
+	.clear | &nbsp;
+	div.grid_1.prefix_2.suffix_9 > div.box > p    |   03
+	.clear | &nbsp;
+	div.grid_1.prefix_3.suffix_8 > div.box > p    |   04
+	.clear | &nbsp;
+	div.grid_1.prefix_4.suffix_7 > div.box > p    |   05
+	.clear | &nbsp;
+	div.grid_1.prefix_5.suffix_6 > div.box > p    |   06
+	.clear | &nbsp;
+	div.grid_1.prefix_6.suffix_5 > div.box > p    |   07
+	.clear | &nbsp;
+	div.grid_1.prefix_7.suffix_4 > div.box > p    |   08
+	.clear | &nbsp;
+	div.grid_1.prefix_8.suffix_3 > div.box > p    |   09
+	.clear | &nbsp;
+	div.grid_1.prefix_9.suffix_2 > div.box > p    |   10
+	.clear | &nbsp;
+	div.grid_1.prefix_10.suffix_1 > div.box > p   |   11
+	.clear | &nbsp;
+	div.grid_1.prefix_11 > div.box > p   |   12
+	.clear | &nbsp;
+
+	
+
+
+
+
+{# ------ AUTO EXPAND ACCORDION ------ #}
+div.grid_12
+	div#kwick-box.box
+		h2 > Mootools Fx.Elements
+		div#kwick
+			ul.kwicks
+				li > a.kwick.one href="#none" > span    |   One
+				li > a.kwick.two href="#none" > span    |   Two
+				li > a.kwick.three href="#none" > span  |   Three
+				li > a.kwick.four href="#none" > span   |   Four
+.clear | &nbsp;
+
+
+
+
+
+{# ------ LEFT COLUMN BOXES ------ #}
+div.grid_3
+
+	{# ------ PARAGRAPHS ------ #}
+	div.box
+		h2 > a id="toggle-paragraphs" href="#none"   |   Paragraphs
+		div#paragraphs.block
+			p   |   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			p   |   Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+
+
+	{# ------ AJAX ------ #}
+	div.box
+		h2 
+			a href="#" id="toggle-ajax" class="hidden"  
+				> img src="/static/img/demo/ajax-loader.gif" id="loading" alt="Loading"
+				Ajax Content
+		div#ajax-content.block   |   Content loaded dynamically
+	
+	
+	
+	{# ------ SECTION MENU ------ #}
+	div.box.menu
+		h2 > a href="#none" id="toggle-section-menu"   |   Section Menu 	
+		div#section-menu.block
+			ul.section.menu
+				li
+					a.menuitem   |   Menu 1
+					ul.submenu
+						li > a   |   SubMenu 1
+						li > a   |   SubMenu 2
+						li > a.active   |   SubMenu 3
+						li > a   |   SubMenu 4
+						li > a   |   SubMenu 5
+						
+				li
+					a.menuitem   |   Menu 2
+					ul.submenu
+						li > a   |   SubMenu 1
+						li > a   |   SubMenu 2
+						li > a   |   SubMenu 3
+						li > a   |   SubMenu 4
+						li > a   |   SubMenu 5
+						
+				li
+					a.menuitem   |   Menu 3
+					ul.submenu
+						li > a   |   SubMenu 1
+						li > a   |   SubMenu 2
+						li > a   |   SubMenu 3
+						li > a   |   SubMenu 4
+						li > a   |   SubMenu 5
+						
+				li
+					a.menuitem   |   Menu 4
+					ul.submenu
+						li > a   |   SubMenu 1
+						li > a   |   SubMenu 2
+						li > a   |   SubMenu 3
+						li > a   |   SubMenu 4
+						li > a   |   SubMenu 5
+
+
+
+
+	{# ------ LIST ITEMS ------ #}
+	div.box
+		h2 > a href="#none" id="toggle-list-items"   |   List Items
+		div#list-items.block
+			p   |   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+			h5  |   A Menu
+			ul.menu
+				li > a href="#none"   |   Item 1
+				li > a href="#none"   |   Item 2
+				li > a href="#none"   |   Item 3
+			
+			h5  |   An unordered list
+			ul
+				li > a href="#none"   |   Item 1
+				li > a href="#none"   |   Item 2
+				li > a href="#none"   |   Item 3
+
+			h5  |   An ordered list
+			ol
+				li > a href="#none"   |   Item 1
+				li > a href="#none"   |   Item 2
+				li > a href="#none"   |   Item 3
+	
+	
+	
+{# ------ END LEFT COLUMN BOXES ------ #}
+
+
+
+
+
+
+
+
+{# ------ CENTER COLUMN BOXES ------ #}
+div.grid_5
+	div.box
+		h2 > a href="#none" id="toggle-accordion"   |   Accordion
+		div#accordion.block
+			div#accordion
+				h3.toggler.atStart   |   Design Process
+				div.element.atStart
+					h4   |   The Value of Design
+					p    |   Design is based on the inspiration of past accomplishments. On that foundation, we can build upon those achievements to shape the future. Design is about life — past, present and future — and the learning process that happens between birth and death. It is about community and shared knowledge and experience. It is the passion to build on what we've learned to create something better.
+
+
+				h3.toggler.atStart   |   Design Influences
+				div.element.atStart
+					h4   |   About this Site
+					p    |   The words "design influences" can be understood as both a plural noun and as subject and verb. The plural noun speaks of those who have come before us and paved the way. The verb speaks of the responsibility of design to lead the way. By understanding where we have come from, we have a better idea of where we are going and, perhaps, where we should be heading.
+
+
+				h3.toggler.atStart   |   Inspiration
+				div.element.atStart
+					h4   |   Inspired by the Past
+					p    
+						I have been inspired by the work of many who have pioneered advances in Web Standards, including 
+						a href="http://www.31three.com/" title="www.31three.com"   |   Jesse Bennett-Chamberlain
+						, 
+						a href="http://www.stopdesign.com/" title="www.stopdesign.com"   |   Douglas Bowman
+						, 
+						a href="http://www.chaoticpattern.com/" title="www.chaoticpattern.com"   |   Allen Chang
+						, 
+						a href="http://www.stuffandnonsense.co.uk/" title="www.stuffandnonsense.co.uk"   |   Andy Clarke
+						, 
+						a href="http://www.hicksdesign.co.uk/" title="www.hicksdesign.co.uk"   |   Jon Hicks
+						, 
+						a href="http://www.shauninman.com/" title="www.shauninman.com"   |   Shaun Inman
+						, 
+						a href="http://www.cameronmoll.com/" title="www.cameronmoll.com"   |   Cameron Moll
+						, 
+						a href="http://veerle.duoh.com/" title="veerle.duoh.com"   |   Veerle Pieters
+						, 
+						a href="http://www.jasonsantamaria.com/" title="www.jasonsantamaria.com"   |   Jason Santa Maria
+						, 
+						a href="http://www.mezzoblue.com/" title="www.mezzoblue.com"   |   Dave Shea
+						, 
+						a href="http://www.thebignoob.com/" title="www.thebignoob.com"   |   Ryan Sims
+						, 
+						a href="http://www.sonspring.com/" title="www.sonspring.com"   |   Nathan Smith
+						, and 
+						a href="http://www.zeldman.com/" title="www.zeldman.com"   |   Jeffrey Zeldman
+						, to name a few. Thank you for inspiring <a href="http://www.domain7.com/WhoWeAre/StephenBau.html" title="Stephen Bau, Designer, Domain7">me</a> to give something back.
+
+
+				h3.toggler.atStart   |   Contribution
+				div.element.atStart
+					h4   |   Shaping the Future
+					p    |   The <a href="/fluid960gs/">Fluid 960 Grid System</a> templates have been built upon the work of Nathan Smith and his <a href="http://960.gs/">960 Grid System</a> using effects from the <a href="http://www.mootools.net/">Mootools</a> JavaScript library. The idea for building these templates was inspired by Andy Clarke, author of <a href="http://www.transcendingcss.com/">Transcending CSS</a>, who advocates a content-out approach to rapid interactive prototyping, crediting Jason Santa Maria with the <a href="http://www.jasonsantamaria.com/archive/2004/05/24/grey_box_method.php">grey box method</a>.
+			
+			
+
+
+	div.box
+		h2 > a href="#none" id="toggle-blockquote"   |   Blockquote
+		div#blockquote.block
+			blockquote
+				p   |   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				p.cite > cite   |   John Smith
+
+	div.box
+		h2 > a href="#none" id="toggle-tables"   |   Tables
+		div#tables.block
+			table
+				tr
+					th   |   Lorem Ipsum
+					td   |   Dolor sit
+					td.currency   |   $125.00
+				tr
+					th   |   Lorem Ipsum
+					td   |   Dolor sit
+					td.currency   |   $75.00
+				tr
+					th   |   Lorem Ipsum
+					td   |   Dolor sit
+					td.currency   |   $200.00
+				tr
+					th   |   Lorem Ipsum
+					td   |   Dolor sit
+					td.currency   |   $64.00
+				tr
+					th   |   Lorem Ipsum
+					td   |   Dolor sit
+					td.currency   |   $36.00
+			
+			
+			table summary="This table includes examples of as many table elements as possible"
+				caption   |   An example table
+				colgroup
+					> col.colA
+					> col.colB
+					> col.colC
+				thead
+					tr  >  th colspan="3" class="table-head"   |   Table heading
+					tr
+						th   |   Column 1
+						th   |   Column 2
+						th.currency   |   Column 3
+				tfoot
+					tr
+						th   |   Subtotal
+						td   |   &nbsp; 
+						th.currency   |   $500.00
+					tr.total
+						th   |   Total
+						td   |   &nbsp; 
+						th.currency   |   $500.00
+				
+				tbody
+					tr.odd
+						th   |   Lorem Ipsum
+						td   |   Dolor sit
+						td.currency   |   $125.00
+					tr
+						th   |   Lorem Ipsum
+						td   |   Dolor sit
+						td.currency   |   $75.00
+					tr.odd
+						th   |   Lorem Ipsum
+						td   |   Dolor sit
+						td.currency   |   $200.00
+					tr
+						th   |   Lorem Ipsum
+						td   |   Dolor sit
+						td.currency   |   $64.00
+					tr.odd
+						th   |   Lorem Ipsum
+						td   |   Dolor sit
+						td.currency   |   $36.00
+					
+
+	
+	
+	
+	
+	div.box
+		h2 > a href="#none" id="toggle-forms"   |   Forms
+		div#forms.block
+			form
+				fieldset.login
+					legend   |   Login Information
+					p
+						label   |   Username:
+						> input type="text" name="username" value=""
+					p
+						label   |   Password:
+						> input type="password" name="password" 					
+					p
+						label   |   Re-type Password:
+						> input type="password" name="password2" 					
+					p
+						label   |   Username:
+						> input class="confirm button" type="submit" value="Confirm Availability"
+				fieldset
+					legend   |   Personal Information
+					p
+						label   |   First Name:
+						> input type="text" name="first-name" value=""
+					p
+						label   |   Last Name:
+						> input type="text" name="last-name" value=""
+					p
+						label   |   Address:
+						> input type="text" name="address1" value=""
+					p
+						label   |   Address 2:
+						> input type="text" name="address2" value=""
+					p
+						label   |   City:
+						> input type="text" name="city" value=""
+					
+					p
+						label   | State/Province:
+						select name="State"							
+							option value=""     |   Select State/Province...
+							option value="AL"   |   Alabama 
+							option value="AK"   |   Alaska 
+							option value="AB"   |   Alberta 
+							option value="AZ"   |   Arizona 
+							option value="AR"   |   Arkansas 
+							option value="BC"   |   British Columbia 
+							option value="CA"   |   California 
+							option value="CO"   |   Colorado 
+							option value="CT"   |   Connecticut 
+							option value="DE"   |   Delaware 
+							option value="DC"   |   District of Columbia 
+							option value="FL"   |   Florida 
+							option value="GA"   |   Georgia 
+							option value="HI"   |   Hawaii 
+							option value="ID"   |   Idaho 
+							option value="IL"   |   Illinois 
+							option value="IN"   |   Indiana 
+							option value="IA"   |   Iowa 
+							option value="KS"   |   Kansas 
+							option value="KY"   |   Kentucky 
+							option value="LA"   |   Louisiana 
+							option value="ME"   |   Maine 
+							option value="MB"   |   Manitoba 
+							option value="MD"   |   Maryland 
+							option value="MA"   |   Massachusetts 
+							option value="MI"   |   Michigan 
+							option value="MN"   |   Minnesota 
+							option value="MS"   |   Mississippi 
+							option value="MO"   |   Missouri 
+							option value="MT"   |   Montana 
+							option value="NE"   |   Nebraska 
+							option value="NV"   |   Nevada 
+							option value="NB"   |   New Brunswick 
+							option value="NH"   |   New Hampshire 
+							option value="NJ"   |   New Jersey 
+							option value="NM"   |   New Mexico 
+							option value="NY"   |   New York 
+							option value="NF"   |   Newfoundland 
+							option value="NC"   |   North Carolina 
+							option value="ND"   |   North Dakota 
+							option value="NT"   |   Northwest Territories 
+							option value="NS"   |   Nova Scotia 
+							option value="OH"   |   Ohio 
+							option value="OK"   |   Oklahoma 
+							option value="ON"   |   Ontario 
+							option value="OR"   |   Oregon 
+							option value="PA"   |   Pennsylvania 
+							option value="PE"   |   Prince Edward Island 
+							option value="PR"   |   Puerto Rico 
+							option value="QC"   |   Quebec 
+							option value="RI"   |   Rhode Island 
+							option value="SK"   |   Saskatchewan 
+							option value="SC"   |   South Carolina 
+							option value="SD"   |   South Dakota 
+							option value="TN"   |   Tennessee 
+							option value="TX"   |   Texas 
+							option value="UT"   |   Utah 
+							option value="VT"   |   Vermont 
+							option value="VA"   |   Virginia 
+							option value="WA"   |   Washington 
+							option value="WV"   |   West Virginia 
+							option value="WI"   |   Wisconsin 
+							option value="WY"   |   Wyoming 
+							option value="YT"   |   Yukon 
+					
+					p
+						label   |   Country:
+						select name="Country"
+							option value=""                |   Select Country...
+							option value="Canada"  		   |   Canada 
+							option value="United States"   |   United States 
+
+					p
+						label   |   Zip/Postal Code:
+						> input type="text" name="zipcode" value=""
+					p
+						label   |   Phone Number:
+						> input type="text" name="phone" value=""	
+					p
+						label   |   Email Address:
+						> input type="text" name="address" value=""						
+					
+					> input type="submit" value="Register" class="register-button"
+					
+					
+	
+<div class="grid_4">
+	<div class="box">
+		<h2>
+			<a href="#" id="toggle-search">Search</a>
+		</h2>
+		<div class="block" id="search">
+			<form method="get" action="" class="search">
+				<p>
+					<input class="search text" name="value" type="text" />
+					<input class="search button" value="Search" type="submit" />
+				</p>
+			</form>
+		</div>
+	</div>
+	<div class="box">
+		<h2>
+			<a href="#" id="toggle-login-forms">Login Forms</a>
+		</h2>
+		<div class="block" id="login-forms">
+			<form action="">
+				<fieldset class="login">
+					<legend>Login</legend>
+					<p class="notice">Login to complete your purchase.</p>
+					<p>
+						<label>Username: </label>
+						<input type="text" name="username" />
+					</p>
+					<p>
+						<label>Password: </label>
+						<input type="password" name="password" />
+					</p>
+					<input class="login button" type="submit" value="Login" />
+				</fieldset>
+			</form>
+			<form action="">
+				<fieldset>
+					<legend>Register</legend>
+					<p>If you do not already have an account, please create a new account to register.</p>
+					<input type="submit" value="Create Account" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="box articles">
+		<h2>
+			<a href="#" id="toggle-articles">Articles</a>
+		</h2>
+		<div class="block" id="articles">
+			<div class="first article">
+				<h3>
+					<a href="#">Article Heading</a>
+				</h3>
+				<h4>Subheading</h4>
+				<p class="meta">Vancouver, BC — Wednesday, 23 April 2008</p>
+				<a href="#" class="image">
+					<img src="/static/img/demo/photo_60x60.jpg" width="60" height="60" alt="photo" />
+				</a>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a href="#">Visit site.</a></p>
+			</div>
+			<div class="article">
+				<h3>
+					<a href="#">Article Heading</a>
+				</h3>
+				<h4>Subheading</h4>
+				<p class="meta">Vancouver, BC — Wednesday, 23 April 2008</p>
+				<a href="#" class="image">
+					<img src="/static/img/demo/photo_60x60.jpg" width="60" height="60" alt="photo" />
+				</a>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a href="#">Visit site.</a></p>
+			</div>
+			<div class="article">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<p class="meta">Vancouver, BC — Wednesday, 23 April 2008</p>
+				<a href="#" class="image">
+					<img src="/static/img/demo/photo_60x60.jpg" width="60" height="60" alt="photo" />
+				</a>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a href="#">Visit site.</a></p>
+				<h5>Heading 5</h5>
+				<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				<h6>Heading 6</h6>
+				<p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock main %}
+
+
+
+
+
+
+
+{% block footer %}
+
+<div class="grid_12" id="site_info">
+	<div class="box">
+		<p>Fluid 960 Grid System, created by <a href="http://www.domain7.com/WhoWeAre/StephenBau.html">Stephen Bau</a>, based on the <a href="http://960.gs/">960 Grid System</a> by <a href="http://sonspring.com/journal/960-grid-system">Nathan Smith</a>. Released under the 
+			<a href="../../../licenses/GPL_license.txt">GPL</a> / <a href="../../../licenses/MIT_license.txt">MIT</a> <a href="../../../README.txt">Licenses</a>.
+		</p>
+	</div>
+</div>
+
+{% endblock footer %}

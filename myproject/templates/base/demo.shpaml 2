@@ -15,89 +15,54 @@
 
 
 {% block header %}
-	<div class="grid_12">
-		<h1 id="branding">
-			<a href="#none">Fluid 960 Grid System</a>
-		</h1>
-	</div>
-	<div class="clear"></div>
-	<div class="grid_12">
-		<ul class="nav main">
-			<li>
-				<a href="#none_">Fluid 12-column</a>
-				<ul>
-					<li>
-						<a href="#none_fluid/mootools/">MooTools</a>
-					</li>
-					<li>
-						<a href="#none_fluid/jquery/">jQuery</a>
-					</li>
-					<li>
-						<a href="#none_fluid/none/">No Javascript</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#none_">Fluid 16-column</a>
-				<ul>
-					<li>
-						<a href="#none_fluid/mootools/">MooTools</a>
-					</li>
-					<li>
-						<a href="#none_fluid/jquery/">jQuery</a>
-					</li>
-					<li>
-						<a href="#none_fluid/none/">No Javascript</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#none_fixed/">Fixed 12-column</a>
-				<ul>
-					<li>
-						<a href="#none_fixed/mootools/">MooTools</a>
-					</li>
-					<li>
-						<a href="#none_fixed/jquery/">jQuery</a>
-					</li>
-					<li>
-						<a href="#none_fixed/none/">No Javascript</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#none_fixed/">Fixed 16-column</a>
-				<ul>
-					<li>
-						<a href="#none_fixed/mootools/">MooTools</a>
-					</li>
-					<li>
-						<a href="#none_fixed/jquery/">jQuery</a>
-					</li>
-					<li>
-						<a href="#none_fixed/none/">No Javascript</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="http://overture21.com/forum/comments.php?DiscussionID=231">Download / Forum</a>
-				<ul>
-					<li>
-						<a href="http://github.com/bauhouse/fluid960gs/tree/">Download: Github</a>
-					</li>
-					<li>
-						<a href="http://github.com/bauhouse/sym-fluid960gs/tree/">Symphony Ensemble</a>
-					</li>
-					<li>
-						<a href="http://overture21.com/forum/comments.php?DiscussionID=231">Forum Discussion</a>
-					</li>
-				</ul>
-			</li>
-			<li class="secondary">
-				<a href="http://960.gs/" title="960.gs | A CSS grid system developed by Nathan Smith">The 960 Grid System</a>
-			</li>
-		</ul>
-	</div>
+	{# ------ TITLE ------ #}
+	div.grid_12
+		h1#branding
+			a href="#none" | Fluid 960s Grid System
+	.clear | &nbsp;
+	
+	
+	{# ------ NAV MENU ------ #}
+	div.grid_12		
+		ul.nav.main
+			li
+				a href="#none_" | Fluid 12-column
+				ul
+					li > a href="#none_fluid/mootools/"  |   MooTools
+					li > a href="#none_fluid/jquery/"    |   jQuery
+					li > a href="#none_fluid/mootools/"  |   No Javascript
+						
+			li
+				a href="#none_" | Fluid 16-column
+				ul
+					li > a href="#none_fluid/mootools/"  |   MooTools
+					li > a href="#none_fluid/jquery/"    |   jQuery
+					li > a href="#none_fluid/mootools/"  |   No Javascript
+
+			li
+				a href="#none_" | Fixed 12-column
+				ul
+					li > a href="#none_fluid/mootools/"  |   MooTools
+					li > a href="#none_fluid/jquery/"    |   jQuery
+					li > a href="#none_fluid/mootools/"  |   No Javascript
+						
+			li
+				a href="#none_" | Fixed 16-column
+				ul
+					li > a href="#none_fluid/mootools/"  |   MooTools
+					li > a href="#none_fluid/jquery/"    |   jQuery
+					li > a href="#none_fluid/mootools/"  |   No Javascript
+					
+			li
+				a href="http://overture21.com/forum/comments.php?DiscussionID=231"  |  Download / Forum
+				ul
+					li > a href="http://github.com/bauhouse/fluid960gs/tree/"   |   Download: Github
+					li > a href="http://github.com/bauhouse/sym-fluid960gs/tree/"    |   Symphony Ensemble
+					li > a href="http://overture21.com/forum/comments.php?DiscussionID=231"  |   Forum Discussion
+
+			
+			li class="secondary" > a href="http://960.gs/" title="960.gs: A CSS grid system developed by Nathan Smith"    |    The 960 Grid System
+
 {% endblock header %}
 
 
@@ -430,10 +395,9 @@
 	</div>
 	<div class="box">
 		<h2>
-			<a href="#" id="toggle-ajax" class="hidden">
-				<img src="/static/img/demo/ajax-loader.gif" id="loading" alt="Loading" />
-				Ajax Content
-			</a>
+			<a href="#" id="toggle-ajax" class="hidden"><img src="/static/img/demo/ajax-loader.gif" id="loading" alt="Loading" />
+	Ajax Content
+</a>
 		</h2>
 		<div class="block" id="ajax-content">
 Content loaded dynamically

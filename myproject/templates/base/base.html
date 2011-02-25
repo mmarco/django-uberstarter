@@ -6,7 +6,6 @@
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-
 <head>
 {% block head %}
 
@@ -20,8 +19,7 @@
     <link rel="apple-touch-icon" href="media/img/apple-touch-icon.png">
   {% endblock meta %}
   
-	<title>{% block title %}Name Your Pages!{% endblock title %}</title>
-		
+  <title>{% block title %}Name Your Pages!{% endblock title %}</title>
 
 {% compress css %}
 {% block css %}
@@ -34,34 +32,37 @@
 {% endblock css %}
 {% endcompress %}
 
-<script src="/static/js/libs/modernizr-1.6.min.js"></script>
+  <script src="/static/js/libs/modernizr-1.6.min.js"></script>
 {% block extra_head %}{% endblock extra_head %}
 {% endblock head %}
 </head>
 
 <body>
 {% block body %}
-	div#container.container_12
-		{% block container %}
-		
-			header
-				{% block header %}
-				{% endblock header %}
-				.clear | &nbsp;
+  <div id="container" class="container_12">
+    
+    {% block container %}
+    <header>
+      {% block header %}
+      {% endblock header %}
+      <div class="clear"></div>
+    </header>
+    
+    <div id="main">
+      {% block main %}
+      {% endblock main %}
+      <div class="clear"></div>
+    </div>
+    
+    <footer>
+      {% block footer %}
+      {% endblock footer %}
+      <div class="clear"></div>
+    </footer>
+    {% endblock container %}
 
-			div#main
-				{% block main %}
-				{% endblock main %}
-				.clear | &nbsp;
-			
-			footer
-				{% block footer %}
-				{% endblock footer %}
-				.clear | &nbsp;
-				
-	    {% endblock container %}
-		.clear | &nbsp;
-	<!-- end of #container -->
+  <div class="clear"></div>
+  </div> <!-- end of #container -->
 
   {% compress js %}
   {% block js %}
